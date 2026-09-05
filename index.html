@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Статья о путешествиях</title>
+    <!-- Шрифт от Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0d15;
+            color: #eaeef2;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== ЗАГОЛОВОК ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f0c27f, #fc5c7d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #8892b0;
+            margin-top: 8px;
+        }
+
+        /* ===== СТАТЬЯ ===== */
+        .article {
+            background: #141824;
+            border-radius: 28px;
+            padding: 40px 45px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            margin-bottom: 50px;
+            transition: 0.3s;
+        }
+
+        .article h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #f0f4fa;
+        }
+
+        .article .meta {
+            color: #8892b0;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #2a2f3f;
+            padding-bottom: 15px;
+        }
+
+        .article p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #d4dcec;
+        }
+
+        .article .highlight {
+            background: #1e2638;
+            padding: 18px 24px;
+            border-left: 5px solid #fc5c7d;
+            border-radius: 12px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #c8d2e6;
+        }
+
+        /* ===== ГАЛЕРЕЯ ===== */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin: 45px 0 20px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #1a1f2e;
+            transition: 0.35s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(252, 92, 125, 0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-item .caption {
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #cdd9f0;
+            background: #1a1f2e;
+            text-align: center;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        .footer {
+            text-align: center;
+            color: #5a6488;
+            font-size: 0.9rem;
+            border-top: 1px solid #202634;
+            padding-top: 30px;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #f0c27f;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .article {
+                padding: 25px 20px;
+            }
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .gallery-item img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ШАПКА -->
+    <div class="header">
+        <h1>🌍 Дневник путешествий</h1>
+        <p>Фотографии, эмоции, вдохновение</p>
+    </div>
+
+    <!-- СТАТЬЯ -->
+    <div class="article">
+        <h2>Почему я люблю горы</h2>
+        <div class="meta">📅 5 сентября 2026 · ⏱ 4 мин чтения</div>
+
+        <p>
+            Горы — это не просто ландшафт. Это место, где воздух становится чище,
+            а мысли — яснее. Каждый подъём — маленькая победа над собой.
+            Когда стоишь на вершине и смотришь вниз, все проблемы кажутся такими далёкими.
+        </p>
+
+        <div class="highlight">
+            «Горы зовут тех, кто готов услышать. Они не судят, они просто ждут.»
+        </div>
+
+        <p>
+            В этом году я решил выбраться в Алтайские горы. Маршрут был непростым,
+            но каждый день приносил что-то новое: то рассвет над облаками,
+            то встречу с дикими козлами, то ночной разговор у костра с незнакомцами,
+            которые стали друзьями.
+        </p>
+
+        <p>
+            Если вы ещё не были в горах — обязательно запланируйте поездку.
+            Даже короткий выезд на выходные может перевернуть ваше восприятие мира.
+        </p>
+
+        <!-- ГАЛЕРЕЯ (внутри статьи) -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/i (3).png" alt="Горы 1" />
+                <div class="caption">🏔️ Рассвет в горах</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/i (34).png" />
+                <div class="caption">🌲 Лесная тропа</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/i (3е).png" alt="Горы 3" />
+                <div class="caption">🌌 Звёздное небо над горами</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/i (4).png" alt="Горы 4" />
+                <div class="caption">⛰️ Вершина 2800 м</div>
+            </div>
+        </div>
+
+        <p style="margin-top: 20px;">
+            Планируешь своё приключение? Делитесь своими историями в комментариях.
+            А пока — смотрите фото и вдохновляйтесь!
+        </p>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <div class="footer">
+        © 2026 · Сделано с ❤️ для любителей гор<br />
+        <span style="font-size:0.85rem; color:#3d4768;">
+            Фото: <a href="https://unsplash.com" target="_blank">Unsplash</a>
+        </span>
+    </div>
+
+</div>
+
+</body>
+</html>
